@@ -1,0 +1,32 @@
+apply plugin: 'java'
+
+
+
+ext {
+  // extra user defined properties on project object? 
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+//
+// task runAllMyTasks{
+//   doLast{
+//     this.tasks.forEach {
+//       it.onlyIf{
+//         it.name = "execute"
+//       }
+//     }
+//   }
+// }
+
+
+task execute(type: JavaExec){
+  main = "slime.ac.uk.Sort"
+  classpath = sourceSets.main.runtimeClasspath
+}

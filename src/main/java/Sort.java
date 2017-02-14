@@ -1,11 +1,9 @@
 // keep methods/units of code: testable(and so they only do 1 thing well)
-class Sort{
+package slime.ac.uk;
+
+public class Sort{
   //private size = 50;
   // big o:
-
-
-
-
 
   public static void main(String[] args){
     int[] data = {5, 2, 6, 2, 3, 1, 4};
@@ -31,7 +29,7 @@ class Sort{
 
 
   // big o-notation: n squared(can reduce to n * log(n)?)
-  private static int[] bubble(int[] input){
+  public static int[] bubble(int[] input){
     // remember java methods are parsed by value of reference?
     int[] output = copyArr(input);
 
@@ -47,7 +45,7 @@ class Sort{
     return output;
   }
 
-  private static int[] insertion(int[] input){
+  public static int[] insertion(int[] input){
     int[] output = copyArr(input);
     int min = 0; //min index
     int temp;
@@ -66,7 +64,7 @@ class Sort{
     return output;
   }
 
-  private static int[] copyArr(int[] input){
+  public static int[] copyArr(int[] input){
     int[] output = new int[input.length];
     System.arraycopy(input, 0, output, 0, output.length);
     return output;
