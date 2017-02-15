@@ -35,11 +35,12 @@ public class SortUnitTests{
     assertArrayEquals(predicted, actual);
     // System.out.println("asfsa");
   }
+
   @Test
   public void testInsertionSort() {
-    int[] arr = {5, 2, 4, 3, 1};
+    int[] arr = {5, 2, 4, 3, 1, 1};
     int[] actual = Sort.insertion(arr);
-    int[] predicted = {1, 2, 3, 4, 5};
+    int[] predicted = {1, 1, 2, 3, 4, 5};
     assertArrayEquals(predicted, actual);
     // System.out.println("asfsa");
   }

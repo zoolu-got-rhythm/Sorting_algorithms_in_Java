@@ -1,9 +1,10 @@
 apply plugin: 'java'
+apply plugin: 'pmd'
 
 
 
 ext {
-  // extra user defined properties on project object? 
+  // extra user defined properties on project object?
 }
 
 repositories {
@@ -14,9 +15,9 @@ dependencies {
   testCompile 'junit:junit:4.12'
 }
 
-//
+
 // task runAllMyTasks{
-//   doLast{
+//   doFirst{
 //     this.tasks.forEach {
 //       it.onlyIf{
 //         it.name = "execute"
@@ -29,4 +30,10 @@ dependencies {
 task execute(type: JavaExec){
   main = "slime.ac.uk.Sort"
   classpath = sourceSets.main.runtimeClasspath
+  def count = 0;
+  this.getTasks().each {
+    t -> count++;
+  }
+  println "count is: $count";
+  println tasks.size();
 }

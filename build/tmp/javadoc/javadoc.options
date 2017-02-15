@@ -1,0 +1,6 @@
+-classpath '/Users/Slime/Documents/NSA_yr2/performance_and_scalability/performanceAndCodeExperiments/sortingAlgorithms/build/classes/main:/Users/Slime/Documents/NSA_yr2/performance_and_scalability/performanceAndCodeExperiments/sortingAlgorithms/build/resources/main'
+-d '/Users/Slime/Documents/NSA_yr2/performance_and_scalability/performanceAndCodeExperiments/sortingAlgorithms/build/docs/javadoc'
+-doctitle 'sortingAlgorithms API'
+-quiet 
+-windowtitle 'sortingAlgorithms API'
+'/Users/Slime/Documents/NSA_yr2/performance_and_scalability/performanceAndCodeExperiments/sortingAlgorithms/src/main/java/Sort.java'

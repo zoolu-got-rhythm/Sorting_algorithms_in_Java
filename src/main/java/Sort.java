@@ -1,5 +1,13 @@
-// keep methods/units of code: testable(and so they only do 1 thing well)
+// keep methods/units of code pure & testable(and so they only do 1 thing well)
 package slime.ac.uk;
+
+/* TODO:
+- ci: TIME on target enviornment and send back report
+- make method generic?
+-
+
+
+*/
 
 public class Sort{
   //private size = 50;
