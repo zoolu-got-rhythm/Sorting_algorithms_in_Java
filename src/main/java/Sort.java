@@ -1,5 +1,6 @@
 // keep methods/units of code pure & testable(and so they only do 1 thing well)
 package slime.ac.uk;
+import slime.ac.uk.TestClass.*;
 
 /* TODO:
 - ci: TIME on target enviornment and send back report
@@ -28,6 +29,8 @@ public class Sort{
     for(int n : insertionSorted){
       System.out.println(n);
     }
+
+    System.out.println(TestClass.name);
 
   }
 
@@ -71,6 +74,8 @@ public class Sort{
     }
     return output;
   }
+
+
 
   public static int[] copyArr(int[] input){
     int[] output = new int[input.length];

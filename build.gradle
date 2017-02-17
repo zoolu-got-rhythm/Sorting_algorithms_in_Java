@@ -37,3 +37,13 @@ task execute(type: JavaExec){
   println "count is: $count";
   println tasks.size();
 }
+
+jar {
+  manifest {
+    attributes(
+      // what does this class-path property do?
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'slime.ac.uk.Sort'
+    )
+  }
+}

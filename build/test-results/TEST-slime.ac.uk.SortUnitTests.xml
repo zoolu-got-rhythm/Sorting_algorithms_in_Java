@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="slime.ac.uk.SortUnitTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-02-15T00:08:51" hostname="Christophers-MacBook-Pro.local" time="0.006">
+<testsuite name="slime.ac.uk.SortUnitTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-02-17T23:18:44" hostname="Christophers-MacBook-Pro.local" time="0.005">
   <properties/>
-  <testcase name="testArrayCopy" classname="slime.ac.uk.SortUnitTests" time="0.003"/>
+  <testcase name="testArrayCopy" classname="slime.ac.uk.SortUnitTests" time="0.002"/>
   <testcase name="testBubbleSort" classname="slime.ac.uk.SortUnitTests" time="0.002"/>
   <testcase name="testJunitWorks" classname="slime.ac.uk.SortUnitTests" time="0.0"/>
-  <testcase name="testInsertionSort" classname="slime.ac.uk.SortUnitTests" time="0.0"/>
+  <testcase name="testInsertionSort" classname="slime.ac.uk.SortUnitTests" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
