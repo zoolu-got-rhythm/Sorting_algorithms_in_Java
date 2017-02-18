@@ -25,7 +25,7 @@ public class Sort{
       System.out.println(n);
     }
 
-    int[] insertionSorted = insertion(data);
+    int[] insertionSorted = selection(data);
     for(int n : insertionSorted){
       System.out.println(n);
     }
@@ -56,7 +56,7 @@ public class Sort{
     return output;
   }
 
-  public static int[] insertion(int[] input){
+  public static int[] selection(int[] input){
     int[] output = copyArr(input);
     int min = 0; //min index
     int temp;
