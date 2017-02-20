@@ -139,11 +139,9 @@ public class Sort{
         int r = 0;
         for(int i = 0; i < temp.length; i++){
           if((r >= right.length) || (l < left.length && left[l] <= right[r])){
-
             temp[i] = left[l];
             l++;
           }else{
-
             temp[i] = right[r];
             r++;
           }
