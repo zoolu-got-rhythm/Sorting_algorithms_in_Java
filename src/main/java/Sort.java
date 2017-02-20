@@ -15,7 +15,27 @@ public class Sort{
   // big o:
 
   public static void main(String[] args){
-    int[] data = {5, 2, 6, 2, 3, 1, 4};
+    int[] data = {5, 2, 6, 2, 3, 1, 4, 7};
+
+    int[] copiedL = new int[data.length / 2];
+    for(int j = 0; j < copiedL.length; j++){
+      copiedL[j] = data[j];
+    }
+    System.out.println("left");
+    for(int n : copiedL){
+      System.out.println(n);
+    }
+    int[] copiedR = new int[data.length / 2];
+    System.out.println("right");
+    for(int i = 0; i < copiedR.length; i++){
+      copiedR[i] = data[4 + i];
+    }
+    for(int n : copiedR){
+      System.out.println(n);
+    }
+    System.out.println("right finished");
+
+
     int[] sorted = bubble(data);
     for(int n : sorted){
       System.out.println(n);
@@ -31,6 +51,12 @@ public class Sort{
     }
 
     System.out.println(TestClass.name);
+    int[] merged = merge(data);
+
+    System.out.println("result");
+    for(int n : merged){
+      System.out.println(n);
+    }
 
   }
 
@@ -73,6 +99,68 @@ public class Sort{
       output[min] = temp;
     }
     return output;
+  }
+
+  public static int[] merge(int[] input){
+    return new MergeSort(){
+      public int[] divide(int[] input){
+        if(input.length < 2) // can't be divided anymore
+          return input;
+        int[] arrLeft = new int[input.length / 2];
+        int[] arrRight = new int[input.length / 2];
+
+        for(int j = 0; j < arrLeft.length; j++){
+          arrLeft[j] = input[j];
+        }
+
+        for(int i = 0; i < arrRight.length; i++){
+          arrRight[i] = input[input.length / 2 + i];
+        }
+
+
+        System.out.println("left arr");
+        for (int l : arrLeft)
+          System.out.println(l);
+        System.out.println("right arr");
+        for (int r : arrRight)
+          System.out.println(r);
+        int[] left = this.divide(arrLeft);
+        int[] right = this.divide(arrRight);
+        return doMerge(left, right);
+        /*
+          doMerge(left, right)
+        */
+        // return this.merge(left, right);
+      }
+      public int[] doMerge(int[] left, int[] right){
+        int[] temp = new int[left.length + right.length];
+
+        int l = 0;
+        int r = 0;
+        for(int i = 0; i < temp.length; i++){
+          if((r >= right.length) || (l < left.length && left[l] <= right[r])){
+
+            temp[i] = left[l];
+            l++;
+          }else{
+
+            temp[i] = right[r];
+            r++;
+          }
+        }
+        System.out.println("merged arr");
+        for(int n : temp)
+          System.out.println(n);
+        System.out.println("merged arr end");
+        return temp;
+      }
+    }.divide(input);
+
+  }
+
+  interface MergeSort{
+    int[] divide(int[] arr);
+    int[] doMerge(int[] left, int[] right);
   }
 
 
