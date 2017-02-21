@@ -16,47 +16,7 @@ public class Sort{
 
   public static void main(String[] args){
     int[] data = {5, 2, 6, 2, 3, 1, 4, 7};
-
-    int[] copiedL = new int[data.length / 2];
-    for(int j = 0; j < copiedL.length; j++){
-      copiedL[j] = data[j];
-    }
-    System.out.println("left");
-    for(int n : copiedL){
-      System.out.println(n);
-    }
-    int[] copiedR = new int[data.length / 2];
-    System.out.println("right");
-    for(int i = 0; i < copiedR.length; i++){
-      copiedR[i] = data[4 + i];
-    }
-    for(int n : copiedR){
-      System.out.println(n);
-    }
-    System.out.println("right finished");
-
-
-    int[] sorted = bubble(data);
-    for(int n : sorted){
-      System.out.println(n);
-    }
-
-    for(int n : data){
-      System.out.println(n);
-    }
-
-    int[] insertionSorted = selection(data);
-    for(int n : insertionSorted){
-      System.out.println(n);
-    }
-
-    System.out.println(TestClass.name);
-    int[] merged = merge(data);
-
-    System.out.println("result");
-    for(int n : merged){
-      System.out.println(n);
-    }
+  }
 
   }
 
@@ -132,6 +92,7 @@ public class Sort{
         */
         // return this.merge(left, right);
       }
+
       public int[] doMerge(int[] left, int[] right){
         int[] temp = new int[left.length + right.length];
 
@@ -153,7 +114,6 @@ public class Sort{
         return temp;
       }
     }.divide(input);
-
   }
 
   interface MergeSort{
