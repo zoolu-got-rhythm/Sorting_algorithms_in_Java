@@ -16,13 +16,10 @@ public class Sort{
 
   public static void main(String[] args){
     int[] data = {5, 2, 6, 2, 3, 1, 4, 7};
+    int[] mergeSorted = merge(data);
+    System.out.println(mergeSorted);
   }
 
-  }
-
-  // private static getRandomNumber(int min, int max){
-  //
-  // }
 
 
   // big o-notation: n squared(can reduce to n * log(n)?)
