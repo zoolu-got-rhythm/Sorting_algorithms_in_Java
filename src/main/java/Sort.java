@@ -4,23 +4,15 @@ import slime.ac.uk.TestClass.*;
 
 /* TODO:
 - ci: TIME on target enviornment and send back report
-- make method generic?
--
-
-
+- make methods generic?
 */
 
 public class Sort{
-  //private size = 50;
-  // big o:
-
   public static void main(String[] args){
     int[] data = {5, 2, 6, 2, 3, 1, 4, 7};
     int[] mergeSorted = merge(data);
     System.out.println(mergeSorted);
   }
-
-
 
   // big o-notation: n squared(can reduce to n * log(n)?)
   public static int[] bubble(int[] input){
@@ -59,7 +51,9 @@ public class Sort{
   }
 
   public static int[] merge(int[] input){
+    // anonymous inner class
     return new MergeSort(){
+
       public int[] divide(int[] input){
         if(input.length < 2) // can't be divided anymore
           return input;
@@ -74,20 +68,9 @@ public class Sort{
           arrRight[i] = input[input.length / 2 + i];
         }
 
-
-        System.out.println("left arr");
-        for (int l : arrLeft)
-          System.out.println(l);
-        System.out.println("right arr");
-        for (int r : arrRight)
-          System.out.println(r);
         int[] left = this.divide(arrLeft);
         int[] right = this.divide(arrRight);
         return doMerge(left, right);
-        /*
-          doMerge(left, right)
-        */
-        // return this.merge(left, right);
       }
 
       public int[] doMerge(int[] left, int[] right){
@@ -104,10 +87,7 @@ public class Sort{
             r++;
           }
         }
-        System.out.println("merged arr");
-        for(int n : temp)
-          System.out.println(n);
-        System.out.println("merged arr end");
+
         return temp;
       }
     }.divide(input);
@@ -118,23 +98,10 @@ public class Sort{
     int[] doMerge(int[] left, int[] right);
   }
 
-
-
   public static int[] copyArr(int[] input){
     int[] output = new int[input.length];
     System.arraycopy(input, 0, output, 0, output.length);
     return output;
   }
-
-
-
-
-
-  // private static int[] selection(){
-  //
-  // }
-
-
-
 
 }

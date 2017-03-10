@@ -4,7 +4,8 @@ apply plugin: 'pmd'
 
 
 ext {
-  // extra user defined properties on project object?
+  // extra user defined properties on Project object?
+  version = 0.1
 }
 
 repositories {
@@ -16,26 +17,21 @@ dependencies {
 }
 
 
-// task runAllMyTasks{
-//   doFirst{
-//     this.tasks.forEach {
-//       it.onlyIf{
-//         it.name = "execute"
-//       }
-//     }
-//   }
-// }
-
 
 task execute(type: JavaExec){
+  println "executing version: ${this.ext.version}"
+  println "number of tasks in this build: " + countTasks()
   main = "slime.ac.uk.Sort"
   classpath = sourceSets.main.runtimeClasspath
+}
+
+// counts number of gradle tasks
+def countTasks(){
   def count = 0;
   this.getTasks().each {
     t -> count++;
   }
-  println "count is: $count";
-  println tasks.size();
+  return count
 }
 
 jar {
