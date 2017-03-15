@@ -1,11 +1,16 @@
 apply plugin: 'java'
 apply plugin: 'pmd'
+apply plugin: "jacoco"
 
 
 
 ext {
   // extra user defined properties on Project object?
   version = 0.1
+}
+
+jacoco {
+    // reportsDir = file("$buildDir/customJacocoReportDir")
 }
 
 repositories {
