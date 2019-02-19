@@ -1,6 +1,9 @@
 // keep methods/units of code pure & testable(and so they only do 1 thing well)
 package slime.ac.uk;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
 import slime.ac.uk.TestClass.*;
+
+import java.util.Arrays;
 
 /* TODO:
 - ci: TIME on target enviornment and send back report
@@ -9,9 +12,20 @@ import slime.ac.uk.TestClass.*;
 
 public class Sort{
   public static void main(String[] args){
-    int[] data = {5, 2, 6, 2, 3, 1, 4, 7};
-    int[] mergeSorted = merge(data);
-    System.out.println(mergeSorted);
+    int[] data = {5, 2, 6, 2, 3, 1, 4, 7, 1};
+    int[] data2 = {4,2,6,7,5,2,2};
+    swap(data, 0, 1);
+    int valGrab = data[0];
+    valGrab = 20; 
+
+//    System.out.println(Arrays.toString(data));
+//    int[] mergeSorted = merge(data);
+//    System.out.println(Arrays.toString(mergeSorted));
+//    System.out.println(Arrays.toString(data));
+    int[] quickSorted = quickSort(data2);
+    System.out.println(Arrays.toString(quickSorted));
+
+
   }
 
   // big o-notation: n squared(can reduce to n * log(n)?)
@@ -93,7 +107,49 @@ public class Sort{
     }.divide(input);
   }
 
-  interface MergeSort{
+  public static int[] quickSort(int[] arr){
+    int[] copyOfArr = copyArr(arr); // not sure if this is needed
+
+    new QuickSort(){
+
+      // Lomuto partition scheme  :  https://en.wikipedia.org/wiki/Quicksort
+      @Override
+      public int partition(int[] arr, int startIndex, int endIndex) {
+        int valOfPivot = arr[endIndex];
+        int i = startIndex;
+        for(int j = startIndex; j < endIndex; j++){
+          if(arr[j] < valOfPivot){
+            // j with i
+            swap(arr, j, i);
+            i++;
+          }
+        }
+
+        // swap val of pivot with i, return index of i
+        swap(arr, i, endIndex);
+        return i;
+      }
+
+      @Override
+      public void sort(int[] arr, int startIndex, int endIndex, String description) {
+        if(startIndex < endIndex){
+          System.out.println(description); 
+          int pivotIndex = this.partition(arr, startIndex, endIndex);
+          sort(arr, startIndex, pivotIndex - 1, "left");
+          sort(arr, pivotIndex + 1, endIndex, "right");
+        }
+      }
+    }.sort(copyOfArr, 0, copyOfArr.length - 1, "initial");
+
+    return copyOfArr;
+  }
+
+  private interface QuickSort{
+    int partition(int[] arr, int startIndex, int endIndex);
+    void sort(int[] arr, int startIndex, int endIndex, String description);
+  }
+
+  private interface MergeSort{
     int[] divide(int[] arr);
     int[] doMerge(int[] left, int[] right);
   }
@@ -102,6 +158,12 @@ public class Sort{
     int[] output = new int[input.length];
     System.arraycopy(input, 0, output, 0, output.length);
     return output;
+  }
+
+  private static void swap(int[] arr, int indexA, int indexB){
+     int temp = arr[indexA];
+     arr[indexA] = arr[indexB];
+     arr[indexB] = temp;
   }
 
 }
