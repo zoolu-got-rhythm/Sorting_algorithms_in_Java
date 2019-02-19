@@ -108,7 +108,7 @@ public class Sort{
   }
 
   public static int[] quickSort(int[] arr){
-    int[] copyOfArr = copyArr(arr); // not sure if this is needed
+    int[] copyOfArr = copyArr(arr); // this will make the quickSort pure without mutating original array
 
     new QuickSort(){
 
