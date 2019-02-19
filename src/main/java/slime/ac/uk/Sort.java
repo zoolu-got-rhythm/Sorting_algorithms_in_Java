@@ -1,7 +1,5 @@
 // keep methods/units of code pure & testable(and so they only do 1 thing well)
 package slime.ac.uk;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
-import slime.ac.uk.TestClass.*;
 
 import java.util.Arrays;
 
@@ -11,22 +9,7 @@ import java.util.Arrays;
 */
 
 public class Sort{
-  public static void main(String[] args){
-    int[] data = {5, 2, 6, 2, 3, 1, 4, 7, 1};
-    int[] data2 = {4,2,6,7,5,2,2};
-    swap(data, 0, 1);
-    int valGrab = data[0];
-    valGrab = 20; 
-
-//    System.out.println(Arrays.toString(data));
-//    int[] mergeSorted = merge(data);
-//    System.out.println(Arrays.toString(mergeSorted));
-//    System.out.println(Arrays.toString(data));
-    int[] quickSorted = quickSort(data2);
-    System.out.println(Arrays.toString(quickSorted));
-
-
-  }
+  public static void main(String[] args){ }
 
   // big o-notation: n squared(can reduce to n * log(n)?)
   public static int[] bubble(int[] input){
@@ -107,7 +90,7 @@ public class Sort{
     }.divide(input);
   }
 
-  public static int[] quickSort(int[] arr){
+  public static int[] quick(int[] arr){
     int[] copyOfArr = copyArr(arr); // this will make the quickSort pure without mutating original array
 
     new QuickSort(){
@@ -160,7 +143,7 @@ public class Sort{
     return output;
   }
 
-  private static void swap(int[] arr, int indexA, int indexB){
+  public static void swap(int[] arr, int indexA, int indexB){
      int temp = arr[indexA];
      arr[indexA] = arr[indexB];
      arr[indexB] = temp;
