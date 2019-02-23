@@ -5,6 +5,7 @@ import org.junit.Before;
 // import all static methods of Assert
 import static org.junit.Assert.*;
 import org.junit.Test;
+import org.sample.Sort;
 
 import java.util.Arrays;
 
