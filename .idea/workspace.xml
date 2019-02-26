@@ -4,12 +4,25 @@
     <list default="true" id="562d0d44-c97d-4d60-9808-8eff873c429f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/benchmarks.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/benchmarks.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BenchmarkList" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/BenchmarkList" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/CompilerHints" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/CompilerHints" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/MyBenchmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sample/MyBenchmark.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_testMethod_jmhTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_testMethod_jmhTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BenchmarkList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/CompilerHints" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/MyBenchmark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort$MergeSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort$QuickSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_jmhType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_jmhType_B1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_jmhType_B2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_jmhType_B3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_testBubbleSort_jmhTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_testInMs_jmhTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_testMergeSort_jmhTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_testBubbleSort_jmhTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_testMergeSort_jmhTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -27,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="232">
+              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,14 +52,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state relative-caret-position="163">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#650#651#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/Sort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1734">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -97,9 +108,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/sample/Sort.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/SortUnitTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sample/Sort.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java" />
       </list>
@@ -191,7 +202,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551137270435" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551145144948" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -253,7 +264,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -292,15 +303,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/Sort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1734">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="232">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -309,14 +320,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="163">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
           </folding>
         </state>
       </provider>

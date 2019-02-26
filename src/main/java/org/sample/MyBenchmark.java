@@ -45,9 +45,15 @@ public class MyBenchmark {
         // Put your benchmark code here.
     }
 
-
-    //    @Fork(value = 1, warmups = 2)
-//    @Warmup(val)
-
-
+    @Benchmark
+    @Fork(value = 0, warmups = 0)
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    public void testInMs(){
+        try {
+            TimeUnit.MILLISECONDS.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
