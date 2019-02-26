@@ -1,1 +1,3 @@
-JMH S 22 org.sample.MyBenchmark S 51 org.sample.generated.MyBenchmark_testMethod_jmhTest S 10 testMethod S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E E E E 
+JMH S 22 org.sample.MyBenchmark S 54 org.sample.generated.MyBenchmark_testMergeSort_jmhTest S 13 testMergeSort S 11 AverageTime E A 1 1 1 E E E E E E E I 1 0 I 1 0 E E E E E U 11 NANOSECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 49 org.sample.generated.MyBenchmark_testInMs_jmhTest S 8 testInMs S 11 AverageTime E A 1 1 1 E E E E E E E I 1 0 I 1 0 E E E E E U 12 MILLISECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 55 org.sample.generated.MyBenchmark_testBubbleSort_jmhTest S 14 testBubbleSort S 11 AverageTime E A 1 1 1 E E E E E E E I 1 0 I 1 0 E E E E E U 11 NANOSECONDS E E 

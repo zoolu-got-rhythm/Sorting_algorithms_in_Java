@@ -3,4 +3,6 @@ dontinline,*.*_avgt_jmhStub
 dontinline,*.*_sample_jmhStub
 dontinline,*.*_ss_jmhStub
 dontinline,*.*_thrpt_jmhStub
-inline,org/sample/MyBenchmark.testMethod
+inline,org/sample/MyBenchmark.testBubbleSort
+inline,org/sample/MyBenchmark.testInMs
+inline,org/sample/MyBenchmark.testMergeSort

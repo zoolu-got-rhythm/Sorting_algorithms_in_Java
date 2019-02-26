@@ -31,7 +31,11 @@
 
 package org.sample;
 
-import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
+
+import java.sql.Time;
+import java.util.concurrent.TimeUnit;
 
 public class MyBenchmark {
 
@@ -40,5 +44,10 @@ public class MyBenchmark {
         // This is a demo/sample template for building your JMH benchmarks. Edit as needed.
         // Put your benchmark code here.
     }
+
+
+    //    @Fork(value = 1, warmups = 2)
+//    @Warmup(val)
+
 
 }
