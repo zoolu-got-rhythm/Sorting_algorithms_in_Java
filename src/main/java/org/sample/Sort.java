@@ -8,6 +8,8 @@ import java.util.Arrays;
 - make methods generic?
 */
 
+// in big o notation ignore minor details in order of simplicity of most dominant factor:
+// e.g: o(n2) will over-shadow o(n2 + n*2 + 10)
 public class Sort{
   public static void main(String[] args){ }
 
@@ -47,6 +49,7 @@ public class Sort{
     return output;
   }
 
+  // worst, average and  best case scenario: O(n x log(n))
   public static int[] merge(int[] input){
     // anonymous inner class
     return new MergeSort(){

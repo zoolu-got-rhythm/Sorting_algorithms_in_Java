@@ -84,9 +84,7 @@ public class SortUnitTests{
 
   @Test
   public void testSwapUtil(){
-
     // swap is designed to mutate the array that is parsed to it
-
     Sort.swap(this.unorderedNumbers, 0,1);
     String mutatedArrayAsString = Arrays.toString(this.unorderedNumbers);
     String originalStringRepresentation = Arrays.toString(this.unorderedNumbersUnParsed);

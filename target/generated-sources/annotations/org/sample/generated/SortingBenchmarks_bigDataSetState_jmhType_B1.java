@@ -1,5 +1,6 @@
 package org.sample.generated;
-public class MyBenchmark_jmhType_B3 extends MyBenchmark_jmhType_B2 {
+import org.sample.SortingBenchmarks.bigDataSetState;
+public class SortingBenchmarks_bigDataSetState_jmhType_B1 extends org.sample.SortingBenchmarks.bigDataSetState {
     boolean p000, p001, p002, p003, p004, p005, p006, p007, p008, p009, p010, p011, p012, p013, p014, p015;
     boolean p016, p017, p018, p019, p020, p021, p022, p023, p024, p025, p026, p027, p028, p029, p030, p031;
     boolean p032, p033, p034, p035, p036, p037, p038, p039, p040, p041, p042, p043, p044, p045, p046, p047;
@@ -17,4 +18,3 @@ public class MyBenchmark_jmhType_B3 extends MyBenchmark_jmhType_B2 {
     boolean p224, p225, p226, p227, p228, p229, p230, p231, p232, p233, p234, p235, p236, p237, p238, p239;
     boolean p240, p241, p242, p243, p244, p245, p246, p247, p248, p249, p250, p251, p252, p253, p254, p255;
 }
-

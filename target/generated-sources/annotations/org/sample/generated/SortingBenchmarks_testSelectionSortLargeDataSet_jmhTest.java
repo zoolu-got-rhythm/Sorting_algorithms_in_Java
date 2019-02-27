@@ -32,8 +32,9 @@ import org.openjdk.jmh.results.ScalarResult;
 import org.openjdk.jmh.results.AggregationPolicy;
 import org.openjdk.jmh.runner.FailureAssistException;
 
-import org.sample.generated.MyBenchmark_jmhType;
-public final class MyBenchmark_testInMs_jmhTest {
+import org.sample.generated.SortingBenchmarks_bigDataSetState_jmhType;
+import org.sample.generated.SortingBenchmarks_jmhType;
+public final class SortingBenchmarks_testSelectionSortLargeDataSet_jmhTest {
 
     boolean p000, p001, p002, p003, p004, p005, p006, p007, p008, p009, p010, p011, p012, p013, p014, p015;
     boolean p016, p017, p018, p019, p020, p021, p022, p023, p024, p025, p026, p027, p028, p029, p030, p031;
@@ -58,7 +59,7 @@ public final class MyBenchmark_testInMs_jmhTest {
     Blackhole blackhole;
     Control notifyControl;
 
-    public BenchmarkTaskResult testInMs_Throughput(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult testSelectionSortLargeDataSet_Throughput(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -68,24 +69,27 @@ public final class MyBenchmark_testInMs_jmhTest {
         }
         if (threadParams.getSubgroupIndex() == 0) {
             RawResults res = new RawResults();
-            MyBenchmark_jmhType l_mybenchmark0_0 = _jmh_tryInit_f_mybenchmark0_0(control);
+            SortingBenchmarks_jmhType l_sortingbenchmarks0_0 = _jmh_tryInit_f_sortingbenchmarks0_0(control);
+            SortingBenchmarks_bigDataSetState_jmhType l_bigdatasetstate1_1 = _jmh_tryInit_f_bigdatasetstate1_1(control);
 
             control.preSetup();
 
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_mybenchmark0_0.testInMs();
+                l_bigdatasetstate1_1.setup();
+                l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
                 res.allOps++;
             }
 
             notifyControl.startMeasurement = true;
-            testInMs_thrpt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_mybenchmark0_0);
+            testSelectionSortLargeDataSet_thrpt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_bigdatasetstate1_1, l_sortingbenchmarks0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_mybenchmark0_0.testInMs();
+                    l_bigdatasetstate1_1.setup();
+                    l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
                     res.allOps++;
                 }
                 control.preTearDown();
@@ -94,7 +98,8 @@ public final class MyBenchmark_testInMs_jmhTest {
             }
 
             if (control.isLastIteration()) {
-                f_mybenchmark0_0 = null;
+                f_bigdatasetstate1_1 = null;
+                f_sortingbenchmarks0_0 = null;
             }
             res.allOps += res.measuredOps;
             int batchSize = iterationParams.getBatchSize();
@@ -104,19 +109,22 @@ public final class MyBenchmark_testInMs_jmhTest {
             res.measuredOps *= opsPerInv;
             res.measuredOps /= batchSize;
             BenchmarkTaskResult results = new BenchmarkTaskResult(res.allOps, res.measuredOps);
-            results.add(new ThroughputResult(ResultRole.PRIMARY, "testInMs", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
+            results.add(new ThroughputResult(ResultRole.PRIMARY, "testSelectionSortLargeDataSet", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void testInMs_thrpt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, MyBenchmark_jmhType l_mybenchmark0_0) throws Throwable {
+    public static void testSelectionSortLargeDataSet_thrpt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SortingBenchmarks_bigDataSetState_jmhType l_bigdatasetstate1_1, SortingBenchmarks_jmhType l_sortingbenchmarks0_0) throws Throwable {
         long operations = 0;
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
-            l_mybenchmark0_0.testInMs();
+            l_bigdatasetstate1_1.setup();
+            long rt = System.nanoTime();
+            l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -125,7 +133,7 @@ public final class MyBenchmark_testInMs_jmhTest {
     }
 
 
-    public BenchmarkTaskResult testInMs_AverageTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult testSelectionSortLargeDataSet_AverageTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -135,24 +143,27 @@ public final class MyBenchmark_testInMs_jmhTest {
         }
         if (threadParams.getSubgroupIndex() == 0) {
             RawResults res = new RawResults();
-            MyBenchmark_jmhType l_mybenchmark0_0 = _jmh_tryInit_f_mybenchmark0_0(control);
+            SortingBenchmarks_jmhType l_sortingbenchmarks0_0 = _jmh_tryInit_f_sortingbenchmarks0_0(control);
+            SortingBenchmarks_bigDataSetState_jmhType l_bigdatasetstate1_1 = _jmh_tryInit_f_bigdatasetstate1_1(control);
 
             control.preSetup();
 
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_mybenchmark0_0.testInMs();
+                l_bigdatasetstate1_1.setup();
+                l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
                 res.allOps++;
             }
 
             notifyControl.startMeasurement = true;
-            testInMs_avgt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_mybenchmark0_0);
+            testSelectionSortLargeDataSet_avgt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_bigdatasetstate1_1, l_sortingbenchmarks0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_mybenchmark0_0.testInMs();
+                    l_bigdatasetstate1_1.setup();
+                    l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
                     res.allOps++;
                 }
                 control.preTearDown();
@@ -161,7 +172,8 @@ public final class MyBenchmark_testInMs_jmhTest {
             }
 
             if (control.isLastIteration()) {
-                f_mybenchmark0_0 = null;
+                f_bigdatasetstate1_1 = null;
+                f_sortingbenchmarks0_0 = null;
             }
             res.allOps += res.measuredOps;
             int batchSize = iterationParams.getBatchSize();
@@ -171,19 +183,22 @@ public final class MyBenchmark_testInMs_jmhTest {
             res.measuredOps *= opsPerInv;
             res.measuredOps /= batchSize;
             BenchmarkTaskResult results = new BenchmarkTaskResult(res.allOps, res.measuredOps);
-            results.add(new AverageTimeResult(ResultRole.PRIMARY, "testInMs", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
+            results.add(new AverageTimeResult(ResultRole.PRIMARY, "testSelectionSortLargeDataSet", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void testInMs_avgt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, MyBenchmark_jmhType l_mybenchmark0_0) throws Throwable {
+    public static void testSelectionSortLargeDataSet_avgt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SortingBenchmarks_bigDataSetState_jmhType l_bigdatasetstate1_1, SortingBenchmarks_jmhType l_sortingbenchmarks0_0) throws Throwable {
         long operations = 0;
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
-            l_mybenchmark0_0.testInMs();
+            l_bigdatasetstate1_1.setup();
+            long rt = System.nanoTime();
+            l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -192,7 +207,7 @@ public final class MyBenchmark_testInMs_jmhTest {
     }
 
 
-    public BenchmarkTaskResult testInMs_SampleTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult testSelectionSortLargeDataSet_SampleTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -202,14 +217,16 @@ public final class MyBenchmark_testInMs_jmhTest {
         }
         if (threadParams.getSubgroupIndex() == 0) {
             RawResults res = new RawResults();
-            MyBenchmark_jmhType l_mybenchmark0_0 = _jmh_tryInit_f_mybenchmark0_0(control);
+            SortingBenchmarks_jmhType l_sortingbenchmarks0_0 = _jmh_tryInit_f_sortingbenchmarks0_0(control);
+            SortingBenchmarks_bigDataSetState_jmhType l_bigdatasetstate1_1 = _jmh_tryInit_f_bigdatasetstate1_1(control);
 
             control.preSetup();
 
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_mybenchmark0_0.testInMs();
+                l_bigdatasetstate1_1.setup();
+                l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
                 res.allOps++;
             }
 
@@ -218,12 +235,13 @@ public final class MyBenchmark_testInMs_jmhTest {
             int batchSize = iterationParams.getBatchSize();
             int opsPerInv = benchmarkParams.getOpsPerInvocation();
             SampleBuffer buffer = new SampleBuffer();
-            testInMs_sample_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, buffer, targetSamples, opsPerInv, batchSize, l_mybenchmark0_0);
+            testSelectionSortLargeDataSet_sample_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, buffer, targetSamples, opsPerInv, batchSize, l_bigdatasetstate1_1, l_sortingbenchmarks0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_mybenchmark0_0.testInMs();
+                    l_bigdatasetstate1_1.setup();
+                    l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
                     res.allOps++;
                 }
                 control.preTearDown();
@@ -232,21 +250,22 @@ public final class MyBenchmark_testInMs_jmhTest {
             }
 
             if (control.isLastIteration()) {
-                f_mybenchmark0_0 = null;
+                f_bigdatasetstate1_1 = null;
+                f_sortingbenchmarks0_0 = null;
             }
             res.allOps += res.measuredOps * batchSize;
             res.allOps *= opsPerInv;
             res.allOps /= batchSize;
             res.measuredOps *= opsPerInv;
             BenchmarkTaskResult results = new BenchmarkTaskResult(res.allOps, res.measuredOps);
-            results.add(new SampleTimeResult(ResultRole.PRIMARY, "testInMs", buffer, benchmarkParams.getTimeUnit()));
+            results.add(new SampleTimeResult(ResultRole.PRIMARY, "testSelectionSortLargeDataSet", buffer, benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void testInMs_sample_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SampleBuffer buffer, int targetSamples, long opsPerInv, int batchSize, MyBenchmark_jmhType l_mybenchmark0_0) throws Throwable {
+    public static void testSelectionSortLargeDataSet_sample_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SampleBuffer buffer, int targetSamples, long opsPerInv, int batchSize, SortingBenchmarks_bigDataSetState_jmhType l_bigdatasetstate1_1, SortingBenchmarks_jmhType l_sortingbenchmarks0_0) throws Throwable {
         long realTime = 0;
         long operations = 0;
         int rnd = (int)System.nanoTime();
@@ -254,6 +273,8 @@ public final class MyBenchmark_testInMs_jmhTest {
         long time = 0;
         int currentStride = 0;
         do {
+            l_bigdatasetstate1_1.setup();
+            long rt = System.nanoTime();
             rnd = (rnd * 1664525 + 1013904223);
             boolean sample = (rnd & rndMask) == 0;
             if (sample) {
@@ -261,7 +282,7 @@ public final class MyBenchmark_testInMs_jmhTest {
             }
             for (int b = 0; b < batchSize; b++) {
                 if (control.volatileSpoiler) return;
-                l_mybenchmark0_0.testInMs();
+                l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
             }
             if (sample) {
                 buffer.add((System.nanoTime() - time) / opsPerInv);
@@ -271,6 +292,7 @@ public final class MyBenchmark_testInMs_jmhTest {
                     rndMask = (rndMask << 1) + 1;
                 }
             }
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         startRndMask = Math.max(startRndMask, rndMask);
@@ -279,7 +301,7 @@ public final class MyBenchmark_testInMs_jmhTest {
     }
 
 
-    public BenchmarkTaskResult testInMs_SingleShotTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult testSelectionSortLargeDataSet_SingleShotTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -288,7 +310,8 @@ public final class MyBenchmark_testInMs_jmhTest {
             this.blackhole = new Blackhole("Today's password is swordfish. I understand instantiating Blackholes directly is dangerous.");
         }
         if (threadParams.getSubgroupIndex() == 0) {
-            MyBenchmark_jmhType l_mybenchmark0_0 = _jmh_tryInit_f_mybenchmark0_0(control);
+            SortingBenchmarks_jmhType l_sortingbenchmarks0_0 = _jmh_tryInit_f_sortingbenchmarks0_0(control);
+            SortingBenchmarks_bigDataSetState_jmhType l_bigdatasetstate1_1 = _jmh_tryInit_f_bigdatasetstate1_1(control);
 
             control.preSetup();
 
@@ -296,42 +319,58 @@ public final class MyBenchmark_testInMs_jmhTest {
             notifyControl.startMeasurement = true;
             RawResults res = new RawResults();
             int batchSize = iterationParams.getBatchSize();
-            testInMs_ss_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, batchSize, l_mybenchmark0_0);
+            testSelectionSortLargeDataSet_ss_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, batchSize, l_bigdatasetstate1_1, l_sortingbenchmarks0_0);
             control.preTearDown();
 
             if (control.isLastIteration()) {
-                f_mybenchmark0_0 = null;
+                f_bigdatasetstate1_1 = null;
+                f_sortingbenchmarks0_0 = null;
             }
             int opsPerInv = control.benchmarkParams.getOpsPerInvocation();
             long totalOps = opsPerInv;
             BenchmarkTaskResult results = new BenchmarkTaskResult(totalOps, totalOps);
-            results.add(new SingleShotResult(ResultRole.PRIMARY, "testInMs", res.getTime(), benchmarkParams.getTimeUnit()));
+            results.add(new SingleShotResult(ResultRole.PRIMARY, "testSelectionSortLargeDataSet", res.getTime(), benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void testInMs_ss_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, int batchSize, MyBenchmark_jmhType l_mybenchmark0_0) throws Throwable {
+    public static void testSelectionSortLargeDataSet_ss_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, int batchSize, SortingBenchmarks_bigDataSetState_jmhType l_bigdatasetstate1_1, SortingBenchmarks_jmhType l_sortingbenchmarks0_0) throws Throwable {
         long realTime = 0;
         result.startTime = System.nanoTime();
         for (int b = 0; b < batchSize; b++) {
             if (control.volatileSpoiler) return;
-            l_mybenchmark0_0.testInMs();
+            l_bigdatasetstate1_1.setup();
+            long rt = System.nanoTime();
+            l_sortingbenchmarks0_0.testSelectionSortLargeDataSet(l_bigdatasetstate1_1, blackhole);
+            realTime += (System.nanoTime() - rt);
         }
         result.stopTime = System.nanoTime();
         result.realTime = realTime;
     }
 
     
-    MyBenchmark_jmhType f_mybenchmark0_0;
+    SortingBenchmarks_bigDataSetState_jmhType f_bigdatasetstate1_1;
     
-    MyBenchmark_jmhType _jmh_tryInit_f_mybenchmark0_0(InfraControl control) throws Throwable {
+    SortingBenchmarks_bigDataSetState_jmhType _jmh_tryInit_f_bigdatasetstate1_1(InfraControl control) throws Throwable {
         if (control.isFailing) throw new FailureAssistException();
-        MyBenchmark_jmhType val = f_mybenchmark0_0;
+        SortingBenchmarks_bigDataSetState_jmhType val = f_bigdatasetstate1_1;
         if (val == null) {
-            val = new MyBenchmark_jmhType();
-            f_mybenchmark0_0 = val;
+            val = new SortingBenchmarks_bigDataSetState_jmhType();
+            f_bigdatasetstate1_1 = val;
+        }
+        return val;
+    }
+    
+    SortingBenchmarks_jmhType f_sortingbenchmarks0_0;
+    
+    SortingBenchmarks_jmhType _jmh_tryInit_f_sortingbenchmarks0_0(InfraControl control) throws Throwable {
+        if (control.isFailing) throw new FailureAssistException();
+        SortingBenchmarks_jmhType val = f_sortingbenchmarks0_0;
+        if (val == null) {
+            val = new SortingBenchmarks_jmhType();
+            f_sortingbenchmarks0_0 = val;
         }
         return val;
     }

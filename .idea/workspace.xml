@@ -4,28 +4,18 @@
     <list default="true" id="562d0d44-c97d-4d60-9808-8eff873c429f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sample/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sample/Sort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SortUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SortUnitTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/benchmarks.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/benchmarks.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BenchmarkList" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/CompilerHints" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/MyBenchmark.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort$MergeSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort$QuickSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/Sort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_jmhType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_jmhType_B1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_jmhType_B2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_jmhType_B3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_testBubbleSort_jmhTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_testInMs_jmhTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sample/generated/MyBenchmark_testMergeSort_jmhTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_testBubbleSort_jmhTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_testMergeSort_jmhTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_jmhType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_jmhType_B1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_jmhType_B2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_jmhType_B3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_testInMs_jmhTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/sample/generated/MyBenchmark_testMethod_jmhTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-1.0.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,24 +30,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-328">
+              <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="-718">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
                 <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#991#992#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SortUnitTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-873">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="274">
+              <caret line="92" column="3" lean-forward="true" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/Sort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="104">
+              <caret line="127" column="57" selection-start-line="127" selection-start-column="57" selection-end-line="127" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/BigOCommentGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -109,10 +109,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/SortUnitTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/sample/Sort.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sample/Sort.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SortUnitTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sample/BigOCommentGenerator.java" />
       </list>
     </option>
   </component>
@@ -202,7 +203,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551145144948" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551290509616" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -217,7 +218,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BigOCommentGenerator">
+    <configuration name="BigOCommentGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sample.BigOCommentGenerator" />
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SortUnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <option name="PACKAGE_NAME" value="" />
@@ -229,6 +243,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BigOCommentGenerator" />
         <item itemvalue="JUnit.SortUnitTests" />
       </list>
     </recent_temporary>
@@ -250,12 +265,18 @@
     <history-entry file="SortUnitTests - 2019.02.23 at 18h 45m 40s.xml">
       <configuration name="SortUnitTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SortUnitTests - 2019.02.26 at 02h 48m 33s.xml">
+      <configuration name="SortUnitTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortUnitTests - 2019.02.26 at 14h 24m 08s.xml">
+      <configuration name="SortUnitTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1825525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -264,7 +285,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30958903" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -277,11 +298,23 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.17447495" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.17447495" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/sample/BigOCommentGenerator.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -291,42 +324,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SortUnitTests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-873">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="-718">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/Sort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="104">
+          <caret line="127" column="57" selection-start-line="127" selection-start-column="57" selection-end-line="127" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SortUnitTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="92" column="3" lean-forward="true" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/MyBenchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-328">
+          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/SortingBenchmarks.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sample/BigOCommentGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="333">
+          <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
         </state>
       </provider>
     </entry>
