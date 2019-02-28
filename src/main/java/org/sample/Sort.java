@@ -14,6 +14,12 @@ public class Sort{
   public static void main(String[] args){ }
 
   // big o-notation: n squared(can reduce to n * log(n)?)
+
+  //   - TIME COMPLEXITY - BUBBLE SORT -
+  //  | worst case: o(n2)               |
+  //  | average case: o(n2)             |
+  //  | best case: o(n)                 |
+  //   ---------------------------------
   public static int[] bubble(int[] input){
     // remember java methods are parsed by value of reference?
     int[] output = copyArr(input);
@@ -30,6 +36,11 @@ public class Sort{
     return output;
   }
 
+  //   - TIME COMPLEXITY - SELECTION SORT -
+  //  | worst case: o(n2)                  |
+  //  | average case: o(n2)                |
+  //  | best case: o(n2)                   |
+  //   ------------------------------------
   public static int[] selection(int[] input){
     int[] output = copyArr(input);
     int min = 0; //min index
@@ -50,6 +61,12 @@ public class Sort{
   }
 
   // worst, average and  best case scenario: O(n x log(n))
+
+  //   - TIME COMPLEXITY - MERGE SORT -
+  //  | worst case: o(n*log(n))        |
+  //  | average case: o(n*log(n))      |
+  //  | best case: o(n*log(n))         |
+  //   --------------------------------
   public static int[] merge(int[] input){
     // anonymous inner class
     return new MergeSort(){
@@ -94,6 +111,12 @@ public class Sort{
   }
 
   // quick-sort sorts the array in place though mutations and no copies
+
+  //   - TIME COMPLEXITY - QUICK SORT -
+  //  | worst case: o(n2)              |
+  //  | average case: o(n*log(n))      |
+  //  | best case: o(n*log(n))         |
+  //   --------------------------------
   public static int[] quick(int[] arr){
     int[] copyOfArr = copyArr(arr); // this will make the quickSort pure without mutating original array
 
