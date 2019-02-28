@@ -1,0 +1,7 @@
+.idea
+local.properties
+**/.DS_Store
+# junit out folder
+out
+target
+
