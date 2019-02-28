@@ -1,5 +1,6 @@
 ## running sorting algorithm performance benchmarks with JMH
 
-in the project root run:
+make sure you have maven installed first
+in the project root run these commands:
 - mvn clean install
 - java -jar target/benchmarks.jar
